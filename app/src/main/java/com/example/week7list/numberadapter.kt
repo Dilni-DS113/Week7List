@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.text.FieldPosition
 
-data class numberadapter(private val data: List<Int>) : RecyclerView.Adapter<numberadapter.ViewHolder>(){
+class numberadapter(private val data: List<Int>) : RecyclerView.Adapter<numberadapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): numberadapter.ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater.inflate(R.layout.layout_row,parent, false) as View
@@ -29,7 +29,7 @@ data class numberadapter(private val data: List<Int>) : RecyclerView.Adapter<num
             number.text = item.toString()
             v.setOnClickListener {
                 val intent = Intent(it.context, DetailActivity::class.java)
-                intent.putExtra("Extra", item)
+                intent.putExtra("NUMBER", item)
                 it.context.startActivity(intent)
             }
         }

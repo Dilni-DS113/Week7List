@@ -11,6 +11,6 @@ class DetailActivity : AppCompatActivity() {
 
         val number = intent.getIntExtra("NUMBER", 0)
         val tvFact = findViewById<TextView>(R.id.fact)
-        tvFact.text = if (number % 2 ==0 ) "$number is even" else "$number is odd"
+        tvFact.text = if (number % 2 == 0 ) "$number is even" else "$number is odd"
     }
 }

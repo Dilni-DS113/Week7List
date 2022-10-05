@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val numberList = findViewById<RecyclerView>(R.id.numberlist)
-        val data = IntArray(100){it}.filter { it % 3 ==0 || it % 5 == 0 }
+        val data = IntArray(100) {it}.filter{ it % 3 == 0 || it % 5 == 0 }
 
         numberList.adapter =  numberadapter(data) // takes the data and converts that to be a row to be displayed on the screen
         numberList.layoutManager = LinearLayoutManager(this)
